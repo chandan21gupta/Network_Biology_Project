@@ -12,10 +12,10 @@ import pandas as pd
 
 class Graph:
     
-    def __init__(self, nodes, directed = False):
+    def __init__(self, nodes):
         self.nodes = nodes
         self.edges = 0
-        self.directed = directed
+#         self.directed = directed
         self.graph = [[0 for i in range(self.nodes)] for j in range(self.nodes)] 
         
     def add_edge(self, source, target, weight):
@@ -23,8 +23,6 @@ class Graph:
 #         print(len(self.graph[0]))
           self.graph[source][target] = weight
           self.edges += 1
-#         if self.directed == True:
-#             self.graph[target][source] = weight
             
     def display_graph(self):
         
